@@ -1,0 +1,604 @@
+:root {
+    --primary-color: #00321F;
+    --primary-light: #0B5D3B;
+    --batik-green: #174A35;
+    --batik-gold: #DEFFEA;
+    --batik-cream: #F4EBDD;
+    --batik-light: #FAF7F0;
+    --white-color: #FFFFFF;
+    --dark-color: #26352E;
+    --border-color: #D0D0D0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--dark-color);
+    background-color: var(--batik-light);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--batik-gold);
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 5px 20px rgba(0, 50, 31, 0.25);
+}
+
+.navbar-brand {
+    color: var(--white-color) !important;
+    font-weight: 700;
+}
+
+.navbar-brand:hover {
+    color: var(--batik-gold) !important;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 6px;
+    padding: 8px 14px !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--white-color);
+    background-color: var(--primary-light);
+}
+
+.navbar .nav-link.active {
+    color: var(--white-color);
+    background-color: var(--primary-light);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-navbar {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.page-header-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero p {
+    max-width: 700px;
+}
+
+.hero-label,
+.section-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+}
+
+.hero-label {
+    color: var(--batik-gold);
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0;
+    color: var(--white-color);
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.page-header h1 {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+}
+
+.page-header p {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: -75px;
+    border: 3px solid rgba(222, 255, 234, 0.2);
+    transform: rotate(45deg);
+}
+
+.page-header::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -75px;
+    bottom: -75px;
+    border: 3px solid rgba(222, 255, 234, 0.2);
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-main {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 7px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    color: var(--white-color);
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-outline-main {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-main:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+
+/* =========================
+   STAT CARD
+========================= */
+
+.stat-card {
+    position: relative;
+    padding: 35px 25px;
+    background-color: var(--white-color);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 50, 31, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 50, 31, 0.18);
+}
+
+.stat-card i {
+    color: var(--primary-color);
+    font-size: 42px;
+}
+
+.stat-card h2,
+.stat-card h3 {
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.stat-card p {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section-light {
+    background-color: var(--batik-cream);
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background-color: var(--white-color);
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 50, 31, 0.15) !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.badge-main {
+    display: inline-block;
+    padding: 7px 12px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.icon-main {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.icon-main:hover {
+    color: var(--primary-light);
+}
+
+
+/* =========================
+   GALERI
+========================= */
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--white-color);
+    box-shadow: 0 5px 15px rgba(0, 50, 31, 0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 20px;
+}
+
+.gallery-caption h5 {
+    margin-top: 12px;
+    color: var(--primary-color);
+}
+
+.gallery-caption p {
+    margin-bottom: 0;
+    color: #666;
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-btn {
+    margin: 5px;
+}
+
+.filter-btn.active {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-control {
+    padding: 11px 13px;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 50, 31, 0.15);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+.contact-item h6 {
+    margin-bottom: 3px;
+    color: var(--primary-color);
+}
+
+.contact-item p {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: relative;
+    padding: 45px 0;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-top: 4px solid var(--batik-gold);
+}
+
+.footer h5 {
+    color: var(--batik-gold);
+}
+
+.footer hr {
+    border-color: rgba(222, 255, 234, 0.4);
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.animate-on-scroll.show-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 450px;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-header {
+        padding: 55px 0;
+    }
+
+    .navbar .nav-link {
+        margin-left: 0;
+    }
+
+    .card-img-top {
+        height: 210px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .logo-navbar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .navbar-brand span {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .page-header {
+        padding: 45px 15px;
+    }
+
+    .page-header-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .stat-card {
+        padding: 25px 15px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .gallery-item img {
+        height: 220px;
+    }
+
+    .footer {
+        padding: 35px 15px;
+    }
+
+    #backToTop {
+        right: 15px;
+        bottom: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+}
