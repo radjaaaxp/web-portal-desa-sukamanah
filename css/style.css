@@ -1,3 +1,7 @@
+/* =====================================================
+   ROOT / VARIABLE
+===================================================== */
+
 :root {
     --primary-color: #00321F;
     --primary-light: #0B5D3B;
@@ -9,6 +13,11 @@
     --dark-color: #26352E;
     --border-color: #D0D0D0;
 }
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
     box-sizing: border-box;
@@ -37,9 +46,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 .navbar {
     background-color: var(--primary-color);
@@ -80,9 +89,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    LOGO
-========================= */
+===================================================== */
 
 .logo-navbar {
     width: 45px;
@@ -99,16 +108,16 @@ img {
 }
 
 .footer-logo {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
     min-height: 520px;
@@ -143,9 +152,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    PAGE HEADER
-========================= */
+===================================================== */
 
 .page-header {
     position: relative;
@@ -156,44 +165,44 @@ img {
     background-color: var(--primary-color);
 }
 
-.page-header h1 {
+.page-header h1,
+.page-header p {
     position: relative;
     z-index: 2;
+}
+
+.page-header h1 {
     font-weight: 700;
 }
 
 .page-header p {
-    position: relative;
-    z-index: 2;
     margin-bottom: 0;
 }
 
-.page-header::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    left: -75px;
-    top: -75px;
-    border: 3px solid rgba(222, 255, 234, 0.2);
-    transform: rotate(45deg);
-}
-
+.page-header::before,
 .page-header::after {
     content: "";
     position: absolute;
     width: 150px;
     height: 150px;
-    right: -75px;
-    bottom: -75px;
     border: 3px solid rgba(222, 255, 234, 0.2);
     transform: rotate(45deg);
 }
 
+.page-header::before {
+    left: -75px;
+    top: -75px;
+}
 
-/* =========================
+.page-header::after {
+    right: -75px;
+    bottom: -75px;
+}
+
+
+/* =====================================================
    BUTTON
-========================= */
+===================================================== */
 
 .btn-main {
     color: var(--white-color);
@@ -225,9 +234,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    STAT CARD
-========================= */
+===================================================== */
 
 .stat-card {
     position: relative;
@@ -262,18 +271,18 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    SECTION
-========================= */
+===================================================== */
 
 .section-light {
     background-color: var(--batik-cream);
 }
 
 
-/* =========================
+/* =====================================================
    CARD
-========================= */
+===================================================== */
 
 .card {
     background-color: var(--white-color);
@@ -304,9 +313,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    BADGE
-========================= */
+===================================================== */
 
 .badge-main {
     display: inline-block;
@@ -317,9 +326,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    ICON
-========================= */
+===================================================== */
 
 .icon-main {
     color: var(--primary-color);
@@ -331,9 +340,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    GALERI
-========================= */
+===================================================== */
 
 .gallery-item {
     overflow: hidden;
@@ -373,9 +382,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    FILTER
-========================= */
+===================================================== */
 
 .filter-btn {
     margin: 5px;
@@ -388,9 +397,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    FORM
-========================= */
+===================================================== */
 
 .form-control {
     padding: 11px 13px;
@@ -404,9 +413,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    CONTACT
-========================= */
+===================================================== */
 
 .contact-item {
     display: flex;
@@ -429,30 +438,225 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
-.footer {
-    position: relative;
-    padding: 45px 0;
-    color: var(--white-color);
+.site-footer {
     background-color: var(--primary-color);
-    border-top: 4px solid var(--batik-gold);
-}
-
-.footer h5 {
-    color: var(--batik-gold);
-}
-
-.footer hr {
-    border-color: rgba(222, 255, 234, 0.4);
+    color: var(--white-color);
+    padding-top: 60px;
+    margin-top: 0;
 }
 
 
-/* =========================
-   ANIMASI
-========================= */
+/* =====================================================
+   FOOTER MAIN
+===================================================== */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.3fr 1.5fr 0.8fr 0.8fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand {
+    padding-right: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white-color);
+}
+
+.footer-brand p {
+    margin: 3px 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =====================================================
+   FOOTER COLUMN
+===================================================== */
+
+.footer-column h4 {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    color: var(--white-color);
+}
+
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   FOOTER CONTACT
+===================================================== */
+
+.footer-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-info i {
+    min-width: 20px;
+    margin-top: 3px;
+    font-size: 17px;
+    color: var(--white-color);
+}
+
+.footer-info a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: var(--white-color);
+}
+
+
+/* =====================================================
+   SOCIAL MEDIA
+===================================================== */
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =====================================================
+   FOOTER NAVIGATION
+===================================================== */
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu a {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-menu a::before {
+    content: "›";
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.footer-menu a:hover {
+    color: var(--white-color);
+    padding-left: 5px;
+}
+
+
+/* =====================================================
+   FOOTER DIVIDER
+===================================================== */
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.footer-government {
+    max-width: 650px;
+}
+
+.footer-government h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--white-color);
+}
+
+.footer-government p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 7px;
+}
+
+.footer-copyright {
+    text-align: right;
+}
+
+.footer-copyright p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
 
 .animate-on-scroll {
     opacity: 0;
@@ -468,9 +672,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    BACK TO TOP
-========================= */
+===================================================== */
 
 #backToTop {
     position: fixed;
@@ -478,16 +682,21 @@ img {
     bottom: 25px;
     width: 45px;
     height: 45px;
-    border: none;
-    border-radius: 50%;
-    color: var(--white-color);
-    background-color: var(--primary-color);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    color: var(--white-color);
+    background-color: var(--primary-color);
+
     opacity: 0;
     visibility: hidden;
     cursor: pointer;
+
     transition: all 0.3s ease;
     z-index: 999;
 }
@@ -503,9 +712,35 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVE TABLET
-========================= */
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        padding-right: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-copyright {
+        text-align: left;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET / MOBILE
+===================================================== */
 
 @media (max-width: 768px) {
 
@@ -533,9 +768,9 @@ img {
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVE MOBILE
-========================= */
+===================================================== */
 
 @media (max-width: 576px) {
 
@@ -590,9 +825,37 @@ img {
         height: 220px;
     }
 
-    .footer {
-        padding: 35px 15px;
+
+    /* FOOTER MOBILE */
+
+    .site-footer {
+        padding-top: 45px;
     }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand h3 {
+        font-size: 21px;
+    }
+
+    .footer-column h4 {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        padding: 25px 0;
+    }
+
+    .footer-government p,
+    .footer-copyright p {
+        font-size: 12px;
+    }
+
+
+    /* BACK TO TOP MOBILE */
 
     #backToTop {
         right: 15px;
@@ -602,3 +865,4 @@ img {
     }
 
 }
+
