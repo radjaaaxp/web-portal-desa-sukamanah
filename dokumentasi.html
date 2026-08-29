@@ -27,6 +27,105 @@
         href="css/style.css"
     >
 
+
+<style>
+/* =========================================================
+   FILTER DOKUMENTASI - TAMPILAN LEBIH RAPI & RESPONSIF
+   ========================================================= */
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 34px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.filter-btn {
+    min-width: 112px;
+    height: 52px;
+    padding: 0 22px !important;
+    border-radius: 10px !important;
+    border: 2px solid #00321F !important;
+    background: #ffffff !important;
+    color: #00321F !important;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    box-shadow: none;
+}
+
+.filter-btn:hover {
+    background: #00321F !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 50, 31, 0.15);
+}
+
+.filter-btn.active {
+    background: #00321F !important;
+    color: #ffffff !important;
+    border-color: #00321F !important;
+    box-shadow: 0 5px 14px rgba(0, 50, 31, 0.18);
+}
+
+/* Jika filter masih menggunakan .text-center mb-4 dari Bootstrap,
+   hilangkan margin bawah bawaan agar jaraknya konsisten. */
+.gallery-filter {
+    margin-bottom: 34px !important;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .filter-buttons {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .filter-btn {
+        min-width: 105px;
+        height: 48px;
+        padding: 0 16px !important;
+        font-size: 15px;
+    }
+}
+
+/* HP */
+@media (max-width: 576px) {
+    .filter-wrapper {
+        margin-bottom: 26px;
+    }
+
+    .filter-buttons {
+        width: 100%;
+        gap: 8px;
+        padding: 0;
+    }
+
+    .filter-btn {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 0;
+        height: 46px;
+        padding: 0 10px !important;
+        font-size: 14px;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -50,7 +149,7 @@
             >
 
             <span>
-                Kantor Kepala Desa Sukamanah
+                Desa Sukamanah
             </span>
 
         </a>
@@ -125,7 +224,7 @@
 
 
         <h1>
-            Dokumentasi Kegiatan
+            Dokumentasi
         </h1>
 
         <p>
@@ -143,7 +242,8 @@
 
     <div class="container">
 
-        <div class="text-center mb-4">
+        <div class="gallery-filter filter-wrapper">
+            <div class="filter-buttons">
 
             <button
                 class="btn btn-outline-main filter-btn active"
@@ -161,9 +261,9 @@
 
             <button
                 class="btn btn-outline-main filter-btn"
-                data-filter="pelayanan"
+                data-filter="kkl"
             >
-                Pelayanan
+                KKL
             </button>
 
             <button
@@ -173,6 +273,9 @@
                 Sosial
             </button>
 
+
+            </div>
+        </div>
 
         <!-- GALERI -->
 
@@ -187,8 +290,8 @@
                 <div class="gallery-item">
 
                     <img
-                        src="images/kegiatan-1.jpeg"
-                        alt="Musyawarah Desa"
+                        src="images/kegiatan-musyawarah-1.jpeg"
+                        alt="Musyawarah Desa Sukamanah"
                     >
 
                     <div class="gallery-caption">
@@ -198,7 +301,7 @@
                         </span>
 
                         <h5>
-                            Musyawarah Desa
+                            Musyawarah Desa Sukamanah
                         </h5>
 
                         <p>
@@ -210,41 +313,7 @@
                 </div>
 
             </div>
-
-
-            <div
-                class="col-md-6 col-lg-4 gallery-card"
-                data-category="pelayanan"
-            >
-
-                <div class="gallery-item">
-
-                    <img
-                        src="images/kegiatan-2.jpeg"
-                        alt="Pelayanan Masyarakat"
-                    >
-
-                    <div class="gallery-caption">
-
-                        <span class="badge badge-main">
-                            Pelayanan
-                        </span>
-
-                        <h5>
-                            Pelayanan Masyarakat
-                        </h5>
-
-                        <p>
-                            Dokumentasi pelayanan administrasi masyarakat.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
+            
             <div
                 class="col-md-6 col-lg-4 gallery-card"
                 data-category="sosial"
@@ -253,8 +322,8 @@
                 <div class="gallery-item">
 
                     <img
-                        src="images/kegiatan-3.jpeg"
-                        alt="Kegiatan Sosial"
+                        src="images/kegiatan-sosial-1.jpeg"
+                        alt="Kafilah MTQ Ke-49 Se-Kecamatan Megamendung"
                     >
 
                     <div class="gallery-caption">
@@ -264,7 +333,7 @@
                         </span>
 
                         <h5>
-                            Kegiatan Sosial
+                            Kafilah MTQ Ke-49 Se-Kecamatan Megamendung
                         </h5>
 
                         <p>
@@ -286,7 +355,7 @@
                 <div class="gallery-item">
 
                     <img
-                        src="images/kegiatan-4.jpeg"
+                        src="images/kegiatan-kkl-1.jpg"
                         alt="Kegiatan KKL"
                     >
 
@@ -297,7 +366,7 @@
                         </span>
 
                         <h5>
-                            Kegiatan Mahasiswa KKL
+                            Kegiatan Terjun Ke Pawai Ta'aruf Sukamanah
                         </h5>
 
                         <p>
@@ -319,8 +388,8 @@
                 <div class="gallery-item">
 
                     <img
-                        src="images/kegiatan-5.jpeg"
-                        alt="Dokumentasi KKL"
+                        src="images/kegiatan-kkl-2.jpg"
+                        alt="Kegiatan KKL"
                     >
 
                     <div class="gallery-caption">
@@ -330,7 +399,7 @@
                         </span>
 
                         <h5>
-                            Dokumentasi Kegiatan KKL
+                            Kunjungan Ke SMAN 1 Megamendung
                         </h5>
 
                         <p>
@@ -352,8 +421,8 @@
                 <div class="gallery-item">
 
                     <img
-                        src="images/kegiatan-6.jpeg"
-                        alt="Kegiatan Mahasiswa"
+                        src="images/kegiatan-kkl-3.jpg"
+                        alt="Kegiatan KKL"
                     >
 
                     <div class="gallery-caption">
@@ -363,7 +432,7 @@
                         </span>
 
                         <h5>
-                            Kegiatan Mahasiswa
+                            Rutinitas Senam Pagi Bersama Perangkat Desa 
                         </h5>
 
                         <p>
