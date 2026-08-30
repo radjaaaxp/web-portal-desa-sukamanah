@@ -1,0 +1,147 @@
+/* =========================================================
+   HERO — CLEAN, BRIGHT, CENTERED
+========================================================= */
+.hero {
+    position: relative;
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 0 78px;
+    overflow: hidden;
+    color: var(--green-950);
+    background:
+        radial-gradient(circle at 12% 18%, rgba(67,198,139,.18), transparent 26%),
+        radial-gradient(circle at 88% 75%, rgba(29,155,104,.10), transparent 31%),
+        linear-gradient(135deg, #FFFFFF 0%, #F5FBF7 54%, #E7F5ED 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(0,50,31,.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent 90%);
+    pointer-events: none;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    background: rgba(67,198,139,.10);
+    filter: blur(90px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+.hero .row {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .row > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.hero .hero-label { color: var(--green-600); }
+.hero .hero-label::before { background: var(--green-400); }
+
+.hero h1 {
+    width: 100%;
+    max-width: 1050px;
+    margin: 20px auto 22px !important;
+    color: var(--green-950);
+    text-align: center;
+    font-size: clamp(3.25rem, 7vw, 6.4rem);
+    line-height: .98;
+    letter-spacing: -.065em;
+}
+
+.hero .lead {
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #5E6B64 !important;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    text-align: center;
+}
+
+.hero .mt-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px !important;
+}
+
+.hero .btn {
+    min-height: 52px;
+    padding: 13px 22px;
+    border-radius: 14px;
+    font-weight: 800;
+    border-width: 1px;
+}
+
+.hero .btn-light {
+    color: var(--white) !important;
+    background: var(--green-800) !important;
+    border-color: var(--green-800) !important;
+    box-shadow: 0 14px 35px rgba(0,50,31,.15);
+}
+
+.hero .btn-light:hover {
+    color: var(--white) !important;
+    background: var(--green-600) !important;
+    border-color: var(--green-600) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0,50,31,.20);
+}
+
+.hero .btn-outline-light {
+    color: var(--green-900) !important;
+    border-color: rgba(0,50,31,.18) !important;
+    background: rgba(255,255,255,.72);
+}
+
+.hero .btn-outline-light:hover {
+    background: var(--green-900);
+    color: var(--white) !important;
+    border-color: var(--green-900) !important;
+    transform: translateY(-3px);
+}
+
+.hero-scroll-cue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+    color: #7B8881;
+    font-size: .66rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.hero-scroll-cue span {
+    width: 26px;
+    height: 1px;
+    background: var(--green-400);
+}

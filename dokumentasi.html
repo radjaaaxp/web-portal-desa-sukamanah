@@ -2,618 +2,863 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Dokumentasi - Kantor Kepala Desa Sukamanah</title>
 
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <!-- =====================================================
+         CSS UTAMA
+    ====================================================== -->
+    <link rel="stylesheet" href="css/style.css">
 
-
-<style>
-/* =========================================================
-   FILTER DOKUMENTASI - TAMPILAN LEBIH RAPI & RESPONSIF
-   ========================================================= */
-.filter-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto 34px;
-}
-
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 10px;
-    margin: 0 auto;
-}
-
-.filter-btn {
-    min-width: 112px;
-    height: 52px;
-    padding: 0 22px !important;
-    border-radius: 10px !important;
-    border: 2px solid #00321F !important;
-    background: #ffffff !important;
-    color: #00321F !important;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    transition: all 0.25s ease;
-    box-shadow: none;
-}
-
-.filter-btn:hover {
-    background: #00321F !important;
-    color: #ffffff !important;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 14px rgba(0, 50, 31, 0.15);
-}
-
-.filter-btn.active {
-    background: #00321F !important;
-    color: #ffffff !important;
-    border-color: #00321F !important;
-    box-shadow: 0 5px 14px rgba(0, 50, 31, 0.18);
-}
-
-/* Jika filter masih menggunakan .text-center mb-4 dari Bootstrap,
-   hilangkan margin bawah bawaan agar jaraknya konsisten. */
-.gallery-filter {
-    margin-bottom: 34px !important;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-    .filter-buttons {
-        gap: 10px;
-        padding: 8px;
-    }
-
-    .filter-btn {
-        min-width: 105px;
-        height: 48px;
-        padding: 0 16px !important;
-        font-size: 15px;
-    }
-}
-
-/* HP */
-@media (max-width: 576px) {
-    .filter-wrapper {
-        margin-bottom: 26px;
-    }
-
-    .filter-buttons {
-        width: 100%;
-        gap: 8px;
-        padding: 0;
-    }
-
-    .filter-btn {
-        flex: 1 1 calc(50% - 8px);
-        min-width: 0;
-        height: 46px;
-        padding: 0 10px !important;
-        font-size: 14px;
-    }
-}
-</style>
+    <!-- =====================================================
+         CSS KOMPONEN
+    ====================================================== -->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/page-header.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 <body>
 
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
 
-<!-- NAVBAR -->
+        <div class="container">
 
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-
-    <div class="container">
-
-        <a
-            class="navbar-brand d-flex align-items-center fw-bold"
-            href="index.html"
-        >
-
-                 <img
-                src="images/desa.png"
-                alt="Logo Desa Sukamanah"
-                class="logo-navbar"
+            <!-- Logo & Nama Desa -->
+            <a
+                class="navbar-brand d-flex align-items-center fw-bold"
+                href="index.html"
             >
-
-            <span>
-                Desa Sukamanah
-            </span>
-
-        </a>
-
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-        >
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-
-        <div
-            class="collapse navbar-collapse"
-            id="navbarNav"
-        >
-
-            <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a
-                        class="nav-link"
-                        href="index.html"
-                    >
-                        Beranda
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a
-                        class="nav-link"
-                        href="tentang.html"
-                    >
-                        Tentang Desa
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a
-                        class="nav-link active"
-                        href="dokumentasi.html"
-                    >
-                        Dokumentasi
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="galeri.html">
-                    Galeri Kegiatan
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-<!-- PAGE HEADER -->
-
-<section class="page-header">
-
-    <div class="container text-center">
-
-
-        <h1>
-            Dokumentasi
-        </h1>
-
-        <p>
-            Kumpulan dokumentasi kegiatan Kantor Kepala Desa Sukamanah
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- FILTER -->
-
-<section class="py-5">
-
-    <div class="container">
-
-        <div class="gallery-filter filter-wrapper">
-            <div class="filter-buttons">
-
-            <button
-                class="btn btn-outline-main filter-btn active"
-                data-filter="all"
-            >
-                Semua
-            </button>
-
-            <button
-                class="btn btn-outline-main filter-btn"
-                data-filter="pemerintahan"
-            >
-                Pemerintahan
-            </button>
-
-            <button
-                class="btn btn-outline-main filter-btn"
-                data-filter="kkl"
-            >
-                KKL
-            </button>
-
-            <button
-                class="btn btn-outline-main filter-btn"
-                data-filter="sosial"
-            >
-                Sosial
-            </button>
-
-
-            </div>
-        </div>
-
-        <!-- GALERI -->
-
-        <div class="row g-4 gallery-container">
-
-
-            <div
-                class="col-md-6 col-lg-4 gallery-card"
-                data-category="pemerintahan"
-            >
-
-                <div class="gallery-item">
-
-                    <img
-                        src="images/kegiatan-musyawarah-1.jpeg"
-                        alt="Musyawarah Desa Sukamanah"
-                    >
-
-                    <div class="gallery-caption">
-
-                        <span class="badge badge-main">
-                            Pemerintahan
-                        </span>
-
-                        <h5>
-                            Musyawarah Desa Sukamanah
-                        </h5>
-
-                        <p>
-                            Dokumentasi kegiatan musyawarah desa.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-            
-            <div
-                class="col-md-6 col-lg-4 gallery-card"
-                data-category="sosial"
-            >
-
-                <div class="gallery-item">
-
-                    <img
-                        src="images/kegiatan-sosial-1.jpeg"
-                        alt="Kafilah MTQ Ke-49 Se-Kecamatan Megamendung"
-                    >
-
-                    <div class="gallery-caption">
-
-                        <span class="badge badge-main">
-                            Sosial
-                        </span>
-
-                        <h5>
-                            Kafilah MTQ Ke-49 Se-Kecamatan Megamendung
-                        </h5>
-
-                        <p>
-                            Kegiatan sosial bersama masyarakat desa.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="col-md-6 col-lg-4 gallery-card"
-                data-category="kkl"
-            >
-
-                <div class="gallery-item">
-
-                    <img
-                        src="images/kegiatan-kkl-1.jpg"
-                        alt="Kegiatan KKL"
-                    >
-
-                    <div class="gallery-caption">
-
-                        <span class="badge badge-main">
-                            KKL
-                        </span>
-
-                        <h5>
-                            Kegiatan Terjun Ke Pawai Ta'aruf Sukamanah
-                        </h5>
-
-                        <p>
-                            Dokumentasi kegiatan mahasiswa selama KKL.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="col-md-6 col-lg-4 gallery-card"
-                data-category="kkl"
-            >
-
-                <div class="gallery-item">
-
-                    <img
-                        src="images/kegiatan-kkl-2.jpg"
-                        alt="Kegiatan KKL"
-                    >
-
-                    <div class="gallery-caption">
-
-                        <span class="badge badge-main">
-                            KKL
-                        </span>
-
-                        <h5>
-                            Kunjungan Ke SMAN 1 Megamendung
-                        </h5>
-
-                        <p>
-                            Kegiatan mahasiswa bersama perangkat desa.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div
-                class="col-md-6 col-lg-4 gallery-card"
-                data-category="kkl"
-            >
-
-                <div class="gallery-item">
-
-                    <img
-                        src="images/kegiatan-kkl-3.jpg"
-                        alt="Kegiatan KKL"
-                    >
-
-                    <div class="gallery-caption">
-
-                        <span class="badge badge-main">
-                            KKL
-                        </span>
-
-                        <h5>
-                            Rutinitas Senam Pagi Bersama Perangkat Desa 
-                        </h5>
-
-                        <p>
-                            Dokumentasi kegiatan mahasiswa di desa.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="site-footer">
-
-    <div class="container">
-
-        <!-- FOOTER UTAMA -->
-        <div class="footer-main">
-
-            <!-- IDENTITAS DESA -->
-            <div class="footer-brand">
-
                 <img
                     src="images/desa.png"
                     alt="Logo Desa Sukamanah"
-                    class="footer-logo"
+                    class="logo-navbar"
                 >
 
-                <h3>Desa Sukamanah</h3>
+                <span>Desa Sukamanah</span>
+            </a>
 
-                <p>Kecamatan Megamendung</p>
-                <p>Kabupaten Bogor</p>
-                <p>Provinsi Jawa Barat</p>
+            <!-- Mobile Toggle -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </div>
+            <!-- Menu -->
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav"
+            >
+                <ul class="navbar-nav ms-auto">
 
-
-            <!-- KONTAK DESA -->
-            <div class="footer-column">
-
-                <h4>Kontak Desa</h4>
-
-                <div class="footer-info">
-
-                    <p>
-                        <i class="bi bi-telephone-fill"></i>
-                        <a href="tel:02518297899">
-                            0251 8297899 / 08812304196
-                        </a>
-                    </p>
-
-                    <p>
-                        <i class="bi bi-envelope-fill"></i>
-                        <a href="mailto:pelayanan.sukamanahmgm@gmail.com">
-                            pelayanan.sukamanahmgm@gmail.com
-                        </a>
-                    </p>
-
-                    <p>
-                        <i class="bi bi-clock-fill"></i>
-                        08.00 - 15.30 WIB
-                    </p>
-
-                    <p>
-                        <i class="bi bi-geo-alt-fill"></i>
-                        Jl. Cikopo Selatan No. 60 Kp. Pasir Muncang
-                        RT 003 RW 002 Desa Sukamanah,
-                        Kecamatan Megamendung,
-                        Kabupaten Bogor.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-             <!-- SOSIAL MEDIA -->
-            <div class="footer-column">
-
-                <h4>Sosial Media</h4>
-
-                <div class="social-links">
-
-                    <a href="#" aria-label="Facebook">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/sukamanah.mgm" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a href="https://www.tiktok.com/@sukamanah.mgm" aria-label="Tiktok">
-                        <i class="bi bi-tiktok"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- JELAJAHI -->
-            <div class="footer-column">
-
-                <h4>Jelajahi</h4>
-
-                <ul class="footer-menu">
-
-                    <li>
-                        <a href="index.html">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
                             Beranda
                         </a>
                     </li>
 
-                    <li>
-                        <a href="tentang.html">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="tentang.html"
+                        >
                             Tentang Desa
                         </a>
                     </li>
 
-                    <li>
-                        <a href="dokumentasi.html">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            href="dokumentasi.html"
+                            aria-current="page"
+                        >
                             Dokumentasi
                         </a>
                     </li>
 
-                    <li>
-                        <a href="galeri.html">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="galeri.html"
+                        >
                             Galeri Kegiatan
                         </a>
                     </li>
 
                 </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+    <section class="page-header">
+
+        <div class="container text-center">
+
+            <h1>Dokumentasi</h1>
+
+            <p>
+                Kumpulan dokumentasi kegiatan Kantor Kepala Desa Sukamanah
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FILTER & GALERI
+    ====================================================== -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <!-- =================================================
+                 FILTER
+            ================================================== -->
+            <div class="gallery-filter filter-wrapper">
+
+                <div class="filter-buttons">
+
+                    <button
+                        class="btn btn-outline-main filter-btn active"
+                        type="button"
+                        data-filter="all"
+                    >
+                        Semua
+                    </button>
+
+                    <button
+                        class="btn btn-outline-main filter-btn"
+                        type="button"
+                        data-filter="pemerintahan"
+                    >
+                        Pemerintahan
+                    </button>
+
+                    <button
+                        class="btn btn-outline-main filter-btn"
+                        type="button"
+                        data-filter="kkl"
+                    >
+                        KKL
+                    </button>
+
+                    <button
+                        class="btn btn-outline-main filter-btn"
+                        type="button"
+                        data-filter="sosial"
+                    >
+                        Sosial
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 GALERI
+            ================================================== -->
+            <div class="row g-4 gallery-container">
+
+
+                <!-- =================================================
+                     DOKUMENTASI 1
+                     MUSYAWARAH DESA
+                ================================================== -->
+                <div
+                    class="col-md-6 col-lg-4 gallery-card"
+                    data-category="pemerintahan"
+                >
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="images/kegiatan-musyawarah-1.jpeg"
+                            alt="Musyawarah Desa Sukamanah"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <span class="badge badge-main d-inline-block mb-3">
+                                Pemerintahan
+                            </span>
+
+                            <h5 class="mb-3">
+                                Musyawarah Desa Sukamanah
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn btn-main detail-btn mt-2"
+
+                                data-bs-toggle="modal"
+                                data-bs-target="#detailModal"
+
+                                data-title="Musyawarah Desa Sukamanah"
+                                data-category="Pemerintahan"
+
+                                data-location="Balai Desa Sukamanah, Kecamatan Megamendung, Kabupaten Bogor"
+
+                                data-participants="Perangkat Desa, BPD, tokoh masyarakat, dan masyarakat Desa Sukamanah"
+
+                                data-organizer="Pemerintah Desa Sukamanah"
+
+                                data-description="Kegiatan musyawarah desa dalam rangka pembahasan dan penyampaian laporan realisasi APBDesa Semester 1 Tahun 2026 kepada masyarakat. Kegiatan ini menjadi sarana penyampaian informasi serta bentuk keterbukaan Pemerintah Desa Sukamanah kepada masyarakat."
+
+                                data-image="images/kegiatan-musyawarah-1.jpeg"
+                            >
+
+                                <i class="bi bi-eye"></i>
+                                Lihat Detail
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DOKUMENTASI 2
+                     MTQ
+                ================================================== -->
+                <div
+                    class="col-md-6 col-lg-4 gallery-card"
+                    data-category="sosial"
+                >
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="images/kegiatan-sosial-1.jpeg"
+                            alt="Kafilah MTQ Ke-49 Se-Kecamatan Megamendung"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <span class="badge badge-main d-inline-block mb-3">
+                                Sosial
+                            </span>
+
+                            <h5 class="mb-3">
+                                Kafilah MTQ Ke-49 Se-Kecamatan Megamendung
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn btn-main detail-btn mt-2"
+
+                                data-bs-toggle="modal"
+                                data-bs-target="#detailModal"
+
+                                data-title="Kafilah MTQ Ke-49 Se-Kecamatan Megamendung"
+                                data-category="Sosial"
+
+                                data-location="Kecamatan Megamendung, Kabupaten Bogor"
+
+                                data-participants="Kafilah MTQ, panitia, perangkat desa, dan masyarakat"
+
+                                data-organizer="Panitia MTQ Kecamatan Megamendung"
+
+                                data-description="Dokumentasi kegiatan Kafilah MTQ Ke-49 tingkat Kecamatan Megamendung sebagai bagian dari kegiatan sosial dan kemasyarakatan. Kegiatan ini menjadi salah satu bentuk partisipasi masyarakat dalam kegiatan keagamaan dan kebersamaan di wilayah Kecamatan Megamendung."
+
+                                data-image="images/kegiatan-sosial-1.jpeg"
+                            >
+
+                                <i class="bi bi-eye"></i>
+                                Lihat Detail
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DOKUMENTASI 3
+                     PAWAI TA'ARUF
+                ================================================== -->
+                <div
+                    class="col-md-6 col-lg-4 gallery-card"
+                    data-category="kkl"
+                >
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="images/kegiatan-kkl-1.jpg"
+                            alt="Kegiatan Terjun Ke Pawai Ta'aruf Sukamanah"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <span class="badge badge-main d-inline-block mb-3">
+                                KKL
+                            </span>
+
+                            <h5 class="mb-3">
+                                Kegiatan Terjun Ke Pawai Ta'aruf Sukamanah
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn btn-main detail-btn mt-2"
+
+                                data-bs-toggle="modal"
+                                data-bs-target="#detailModal"
+
+                                data-title="Kegiatan Terjun Ke Pawai Ta'aruf Sukamanah"
+                                data-category="KKL"
+
+                                data-location="Desa Sukamanah, Kecamatan Megamendung, Kabupaten Bogor"
+
+                                data-participants="Mahasiswa KKL, perangkat desa, dan masyarakat Desa Sukamanah"
+
+                                data-organizer="Pemerintah Desa Sukamanah bersama masyarakat"
+
+                                data-description="Dokumentasi keterlibatan mahasiswa dalam kegiatan Pawai Ta'aruf sebagai bagian dari pelaksanaan Kuliah Kerja Lapangan di Desa Sukamanah. Kegiatan ini menjadi kesempatan bagi mahasiswa untuk berinteraksi secara langsung dengan masyarakat dan mengikuti kegiatan kemasyarakatan yang dilaksanakan di lingkungan desa."
+
+                                data-image="images/kegiatan-kkl-1.jpg"
+                            >
+
+                                <i class="bi bi-eye"></i>
+                                Lihat Detail
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DOKUMENTASI 4
+                     KUNJUNGAN SMAN
+                ================================================== -->
+                <div
+                    class="col-md-6 col-lg-4 gallery-card"
+                    data-category="kkl"
+                >
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="images/kegiatan-kkl-2.jpg"
+                            alt="Kunjungan Ke SMAN 1 Megamendung"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <span class="badge badge-main d-inline-block mb-3">
+                                KKL
+                            </span>
+
+                            <h5 class="mb-3">
+                                Kunjungan Ke SMAN 1 Megamendung
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn btn-main detail-btn mt-2"
+
+                                data-bs-toggle="modal"
+                                data-bs-target="#detailModal"
+
+                                data-title="Kunjungan Ke SMAN 1 Megamendung"
+                                data-category="KKL"
+
+                                data-location="SMAN 1 Megamendung, Kecamatan Megamendung, Kabupaten Bogor"
+
+                                data-participants="Mahasiswa KKL, guru, dan pihak SMAN 1 Megamendung"
+
+                                data-organizer="Mahasiswa KKL bersama pihak SMAN 1 Megamendung"
+
+                                data-description="Kegiatan kunjungan mahasiswa untuk berkoordinasi dan melaksanakan kegiatan bersama dalam lingkungan pendidikan di Kecamatan Megamendung. Kunjungan ini dilakukan sebagai bagian dari kegiatan KKL serta untuk membangun komunikasi dan hubungan yang baik dengan pihak sekolah."
+
+                                data-image="images/kegiatan-kkl-2.jpg"
+                            >
+
+                                <i class="bi bi-eye"></i>
+                                Lihat Detail
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     DOKUMENTASI 5
+                     SENAM PAGI
+                ================================================== -->
+                <div
+                    class="col-md-6 col-lg-4 gallery-card"
+                    data-category="kkl"
+                >
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="images/kegiatan-kkl-3.jpg"
+                            alt="Rutinitas Senam Pagi Bersama Perangkat Desa"
+                        >
+
+                        <div class="gallery-caption">
+
+                            <span class="badge badge-main d-inline-block mb-3">
+                                KKL
+                            </span>
+
+                            <h5 class="mb-3">
+                                Rutinitas Senam Pagi Bersama Perangkat Desa
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn btn-main detail-btn mt-2"
+
+                                data-bs-toggle="modal"
+                                data-bs-target="#detailModal"
+
+                                data-title="Rutinitas Senam Pagi Bersama Perangkat Desa"
+                                data-category="KKL"
+
+                                data-location="Kantor Desa Sukamanah, Kecamatan Megamendung, Kabupaten Bogor"
+
+                                data-participants="Mahasiswa KKL dan perangkat Desa Sukamanah"
+
+                                data-organizer="Pemerintah Desa Sukamanah"
+
+                                data-description="Kegiatan senam pagi bersama perangkat desa sebagai bagian dari aktivitas kebersamaan dan dokumentasi mahasiswa selama pelaksanaan KKL. Kegiatan ini juga menjadi salah satu bentuk interaksi mahasiswa dengan perangkat desa dalam suasana yang lebih santai dan membangun kebersamaan."
+
+                                data-image="images/kegiatan-kkl-3.jpg"
+                            >
+
+                                <i class="bi bi-eye"></i>
+                                Lihat Detail
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
         </div>
 
-
-        <!-- GARIS PEMBATAS -->
-        <div class="footer-divider"></div>
+    </section>
 
 
-        <!-- FOOTER BAWAH -->
-        <div class="footer-bottom">
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="site-footer">
 
-            <div class="footer-government">
+        <div class="container">
 
-                <h4>Pemerintah Desa Sukamanah</h4>
+            <!-- FOOTER UTAMA -->
+            <div class="footer-main">
 
-                <p>
-                    Jl. Cikopo Selatan No. 60 Kp. Pasir Muncang
-                    RT 003 RW 002 Desa Sukamanah
-                    Kecamatan Megamendung Kabupaten Bogor.
-                </p>
 
-                <p>
-                    Desa Sukamanah, Kecamatan Megamendung,
-                    Kabupaten Bogor, Provinsi Jawa Barat 16770
-                </p>
+                <!-- IDENTITAS DESA -->
+                <div class="footer-brand">
 
-                <p>
-                    Kode Wilayah: 32.01.26.2007
-                </p>
+                    <img
+                        src="images/desa.png"
+                        alt="Logo Desa Sukamanah"
+                        class="footer-logo"
+                    >
+
+                    <h3>Desa Sukamanah</h3>
+
+                    <p>Kecamatan Megamendung</p>
+                    <p>Kabupaten Bogor</p>
+                    <p>Provinsi Jawa Barat</p>
+
+                </div>
+
+
+                <!-- KONTAK DESA -->
+                <div class="footer-column">
+
+                    <h4>Kontak Desa</h4>
+
+                    <div class="footer-info">
+
+                        <p>
+                            <i class="bi bi-telephone-fill"></i>
+
+                            <a href="tel:02518297899">
+                                0251 8297899 / 08812304196
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="bi bi-envelope-fill"></i>
+
+                            <a href="mailto:pelayanan.sukamanahmgm@gmail.com">
+                                pelayanan.sukamanahmgm@gmail.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="bi bi-clock-fill"></i>
+                            08.00 - 15.30 WIB
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Jl. Cikopo Selatan No. 60 Kp. Pasir Muncang
+                            RT 003 RW 002 Desa Sukamanah,
+                            Kecamatan Megamendung,
+                            Kabupaten Bogor.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOSIAL MEDIA -->
+                <div class="footer-column">
+
+                    <h4>Sosial Media</h4>
+
+                    <div class="social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Facebook"
+                        >
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/sukamanah.mgm"
+                            aria-label="Instagram"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a
+                            href="https://www.tiktok.com/@sukamanah.mgm"
+                            aria-label="TikTok"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JELAJAHI -->
+                <div class="footer-column">
+
+                    <h4>Jelajahi</h4>
+
+                    <ul class="footer-menu">
+
+                        <li>
+                            <a href="index.html">
+                                Beranda
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tentang.html">
+                                Tentang Desa
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="dokumentasi.html">
+                                Dokumentasi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="galeri.html">
+                                Galeri Kegiatan
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
 
 
-            <div class="footer-copyright">
+            <!-- GARIS PEMBATAS -->
+            <div class="footer-divider"></div>
 
-                <p>
-                    © 2026 Powered by Min-Jaa
-                </p>
+
+            <!-- FOOTER BAWAH -->
+            <div class="footer-bottom">
+
+
+                <!-- INFORMASI PEMERINTAHAN -->
+                <div class="footer-government">
+
+                    <h4>
+                        Pemerintah Desa Sukamanah
+                    </h4>
+
+                    <p>
+                        Jl. Cikopo Selatan No. 60 Kp. Pasir Muncang
+                        RT 003 RW 002 Desa Sukamanah
+                        Kecamatan Megamendung Kabupaten Bogor.
+                    </p>
+
+                    <p>
+                        Desa Sukamanah, Kecamatan Megamendung,
+                        Kabupaten Bogor, Provinsi Jawa Barat 16770
+                    </p>
+
+                    <p>
+                        Kode Wilayah: 32.01.26.2007
+                    </p>
+
+                </div>
+
+
+                <!-- COPYRIGHT -->
+                <div class="footer-copyright">
+
+                    <p>
+                        © 2026 Powered by Min-Jaa
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         DETAIL MODAL
+    ====================================================== -->
+    <div
+        class="modal fade"
+        id="detailModal"
+        tabindex="-1"
+        aria-labelledby="detailModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+
+                <!-- MODAL HEADER -->
+                <div class="modal-header">
+
+                    <div>
+
+                        <span
+                            class="badge badge-main mb-2"
+                            id="detailModalCategory"
+                        >
+                            Dokumentasi
+                        </span>
+
+                        <h5
+                            class="modal-title"
+                            id="detailModalLabel"
+                        >
+                            Detail Kegiatan
+                        </h5>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Tutup"
+                    ></button>
+
+                </div>
+
+
+                <!-- MODAL BODY -->
+                <div class="modal-body">
+
+                    <!-- GAMBAR -->
+                    <img
+                        id="detailModalImage"
+                        src=""
+                        alt="Detail dokumentasi"
+                        class="img-fluid rounded"
+                    >
+
+
+                    <!-- INFORMASI DETAIL -->
+                    <div class="detail-info mt-4">
+
+
+                        <!-- LOKASI -->
+                        <div class="detail-row">
+
+                            <div class="detail-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+
+                            <div class="detail-content">
+
+                                <span class="detail-label">
+                                    Lokasi
+                                </span>
+
+                                <p id="detailModalLocation">
+                                    -
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PESERTA -->
+                        <div class="detail-row">
+
+                            <div class="detail-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+
+                            <div class="detail-content">
+
+                                <span class="detail-label">
+                                    Peserta
+                                </span>
+
+                                <p id="detailModalParticipants">
+                                    -
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PENYELENGGARA -->
+                        <div class="detail-row">
+
+                            <div class="detail-icon">
+                                <i class="bi bi-building-fill"></i>
+                            </div>
+
+                            <div class="detail-content">
+
+                                <span class="detail-label">
+                                    Penyelenggara
+                                </span>
+
+                                <p id="detailModalOrganizer">
+                                    -
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DESKRIPSI -->
+                        <div class="detail-row">
+
+                            <div class="detail-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                            </div>
+
+                            <div class="detail-content">
+
+                                <span class="detail-label">
+                                    Deskripsi Kegiatan
+                                </span>
+
+                                <p id="detailModalDescription">
+                                    -
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -621,19 +866,35 @@
 
     </div>
 
-</footer>
 
-<!-- BACK TO TOP -->
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+    <button
+        id="backToTop"
+        aria-label="Kembali ke atas"
+    >
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
-<button id="backToTop" aria-label="Kembali ke atas">
 
-<i class="bi bi-arrow-up"></i>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-</button>
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/script.js"></script>
+    <!-- Custom JS -->
+    <script src="js/navbar.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/back-to-top.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/detail-modal.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

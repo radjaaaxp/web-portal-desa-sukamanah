@@ -1,0 +1,32 @@
+/* =========================================================
+   CONTACT
+========================================================= */
+.form-control,
+.form-select {
+    min-height: 52px;
+    border: 1px solid rgba(0,50,31,.12);
+    border-radius: 14px;
+    background: #FFFFFF;
+    color: var(--ink);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--green-500);
+    box-shadow: 0 0 0 4px rgba(29,155,104,.10);
+}
+
+.form-control::placeholder { color: #8A9890; }
+
+.contact-item {
+    height: 100%;
+    padding: 22px;
+    border: 1px solid rgba(0,50,31,.08);
+    border-radius: var(--radius-md);
+    background: #FFFFFF;
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-item i { color: var(--green-600); font-size: 1.25rem; }
+.contact-item h6 { color: var(--green-900); }
+.contact-item p { color: #6D7772; margin: 0; }

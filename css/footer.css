@@ -1,0 +1,209 @@
+/* =========================================================
+   FOOTER
+========================================================= */
+.site-footer {
+    background: linear-gradient(135deg, #030806 0%, #06110D 100%) !important;
+    color: #A8B1AC;
+    padding-top: 70px;
+    border-top: 1px solid rgba(143,227,187,.08);
+}
+
+/* Empat kolom agar semua bagian footer sejajar di desktop */
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.45fr 1.35fr .85fr .95fr;
+    gap: 42px;
+    padding-bottom: 55px;
+    align-items: start;
+}
+
+.footer-brand h3,
+.footer-column h4,
+.footer-government h4 {
+    color: #FFFFFF;
+}
+
+.footer-brand h3 {
+    margin-bottom: 14px;
+}
+
+.footer-brand p {
+    color: #94A29A;
+}
+
+.footer-column h4 {
+    position: relative;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-column h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 28px;
+    height: 2px;
+    background: #61CF9E;
+    border-radius: 99px;
+}
+
+.footer-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 13px;
+    font-size: .9rem;
+    color: #8F9F97;
+}
+
+/* Fix bug: icon tidak boleh mendapat background seperti blok */
+.footer-info i {
+    flex: 0 0 22px;
+    width: 22px;
+    min-width: 22px;
+    margin-top: 3px;
+    color: #61CF9E !important;
+    background: transparent !important;
+    line-height: 1;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.footer-info a,
+.footer-menu a {
+    color: #A8B7AF;
+}
+
+.footer-info a:hover,
+.footer-menu a:hover {
+    color: #FFFFFF;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F5FCF8 !important;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.04);
+    border-radius: 12px;
+    transition: .3s ease;
+}
+
+.social-links a:hover {
+    background: #79DFAE !important;
+    color: #002218 !important;
+    transform: translateY(-3px);
+}
+
+.social-links a i {
+    background: transparent !important;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    font-size: .9rem;
+}
+
+.footer-menu a::before {
+    content: "→";
+    display: inline-block;
+    margin-right: 8px;
+    color: #61CF9E;
+    transition: transform .25s;
+}
+
+.footer-menu a:hover::before {
+    transform: translateX(4px);
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 0 30px;
+    font-size: .82rem;
+}
+
+.footer-copyright {
+    color: #7F8983;
+}
+
+.footer-government h4 {
+    margin-bottom: 10px;
+}
+
+.footer-government p {
+    color: #8F9F97;
+}
+
+.footer-logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+/* =========================================================
+   FOOTER RESPONSIVE
+========================================================= */
+@media (max-width: 991.98px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* FIX: navigasi footer menggunakan panah, bukan blok warna */
+.footer-menu a::before {
+    content: "→" !important;
+    display: inline-block;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 8px;
+    padding: 0 !important;
+    background: transparent !important;
+    color: #61CF9E !important;
+    border-radius: 0 !important;
+    line-height: 1;
+}
+
+.footer-menu li {
+    background: transparent !important;
+}
+

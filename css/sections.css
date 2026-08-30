@@ -1,0 +1,27 @@
+/* =========================================================
+   SECTIONS
+========================================================= */
+.section-light {
+    background: #FFFFFF !important;
+}
+
+.section-light img,
+.img-fluid.rounded.shadow {
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.section-light h2,
+section.py-5 h2 {
+    font-size: clamp(2rem, 4vw, 3.45rem);
+    line-height: 1.06;
+}
+
+.section-light p,
+section.py-5 p {
+    color: var(--muted);
+}
+
+.section-light .btn-main { margin-top: 14px; }
+
+.about-section .row > [class*="col"] { position: relative; }

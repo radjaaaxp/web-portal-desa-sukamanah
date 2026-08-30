@@ -1,0 +1,28 @@
+/* =========================================================
+   ANIMATIONS / BACK TO TOP
+========================================================= */
+.animate-on-scroll { opacity: 0; transform: translateY(28px); transition: opacity .75s ease, transform .75s ease; }
+.animate-on-scroll.show-animation { opacity: 1; transform: translateY(0); }
+
+#backToTop {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 14px;
+    background: var(--green-800);
+    color: #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,.16);
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 999;
+}
+#backToTop.show { opacity: 1; visibility: visible; }
+#backToTop:hover { transform: translateY(-4px); background: var(--green-600); }
