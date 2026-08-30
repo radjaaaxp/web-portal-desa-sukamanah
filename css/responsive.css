@@ -255,8 +255,13 @@ body > section.py-5:not(.section-light) {
     box-shadow: 0 22px 46px rgba(0,0,0,.25) !important;
 }
 
-.stat-card i {
-    color: #68D9A4 !important;
+.stat-card i,
+.stat-card i::before,
+.stat-card .bi,
+.stat-card .bi::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    opacity: 1 !important;
 }
 
 .stat-card h3 {
@@ -490,4 +495,121 @@ body > section.py-5:not(.section-light) {
         margin-top: 10px;
         border: 1px solid rgba(143,227,187,.10);
     }
+}
+
+
+/* =========================================================
+   FINAL OVERRIDE - STAT ICONS WHITE
+========================================================= */
+.stat-card i,
+.stat-card i::before,
+.stat-card [class*="bi-"]::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+/* =========================================================
+   ICON TENTANG DESA - PUTIH
+========================================================= */
+
+.icon-main,
+.icon-main::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   BACKGROUND ICON
+========================================================= */
+
+.icon-main {
+    width: 64px;
+    height: 64px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    background: #00321f00;
+
+    border-radius: 16px;
+
+    font-size: 1.8rem !important;
+}
+
+
+/* =========================================================
+   BOOTSTRAP ICONS ::BEFORE
+========================================================= */
+
+.icon-main.bi::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.card:hover .icon-main {
+    background: #00452e00;
+    color: #FFFFFF !important;
+}
+
+.card:hover .icon-main::before {
+    color: #FFFFFF !important;
+}
+
+/* =========================================================
+   SEMUA TOMBOL UTAMA DISAMAKAN DENGAN
+   "LIHAT DOKUMENTASI" DI HERO
+========================================================= */
+
+.btn-main {
+    color: #052117 !important;
+    background: #F7FFFB !important;
+    border-color: #F7FFFB !important;
+    box-shadow: 0 12px 30px rgba(0, 50, 31, 0.13) !important;
+}
+
+.btn-main:hover {
+    color: #052117 !important;
+    background: #DFF7E9 !important;
+    border-color: #DFF7E9 !important;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ICON DI DALAM TOMBOL
+========================================================= */
+
+.btn-main i,
+.btn-main .bi {
+    color: #052117 !important;
+}
+
+
+/* =========================================================
+   KHUSUS TOMBOL DI HERO
+   Tetap sama persis
+========================================================= */
+
+.hero .btn-light {
+    color: #052117 !important;
+    background: #F7FFFB !important;
+    border-color: #F7FFFB !important;
+}
+
+.hero .btn-light:hover {
+    color: #052117 !important;
+    background: #DFF7E9 !important;
+    border-color: #DFF7E9 !important;
 }

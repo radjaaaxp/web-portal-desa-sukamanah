@@ -1,6 +1,7 @@
 /* =========================================================
    STATS
 ========================================================= */
+
 .stat-card {
     height: 100%;
     display: flex;
@@ -18,21 +19,38 @@
 
 .stat-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(29,155,104,.28);
+    border-color: rgba(29, 155, 104, .28);
     box-shadow: var(--shadow-md);
 }
 
-.stat-card i {
+/* =========================================================
+   ICON STATISTIK
+   ========================================================= */
+
+.stat-card i,
+.stat-card i::before,
+.stat-card .bi,
+.stat-card .bi::before {
     margin-bottom: 16px;
-    color: var(--green-500);
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    opacity: 1 !important;
     font-size: 1.3rem;
 }
+
+/* =========================================================
+   JUDUL STATISTIK
+========================================================= */
 
 .stat-card h3 {
     margin: 0 0 4px;
     color: var(--green-900);
     font-size: 1.6rem;
 }
+
+/* =========================================================
+   DESKRIPSI STATISTIK
+========================================================= */
 
 .stat-card p {
     margin: 0;

@@ -207,3 +207,122 @@
     background: transparent !important;
 }
 
+/* =========================================================
+   SEMUA ICON FOOTER - PUTIH
+========================================================= */
+
+.site-footer i,
+.site-footer .bi {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+
+/* Icon Bootstrap Icons menggunakan ::before */
+.site-footer i::before,
+.site-footer .bi::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   ICON SOSIAL MEDIA
+========================================================= */
+
+.site-footer .social-links i,
+.site-footer .social-links .bi {
+    color: #FFFFFF !important;
+}
+
+.site-footer .social-links i::before,
+.site-footer .social-links .bi::before {
+    color: #FFFFFF !important;
+}
+
+
+/* Hover icon sosial media */
+.site-footer .social-links a:hover i,
+.site-footer .social-links a:hover .bi,
+.site-footer .social-links a:hover i::before,
+.site-footer .social-links a:hover .bi::before {
+    color: #FFFFFF !important;
+}
+
+/* =========================================================
+   PANAH / ICON FOOTER - PUTIH
+========================================================= */
+
+.site-footer .bi-arrow-right,
+.site-footer .bi-arrow-left,
+.site-footer .bi-arrow-up,
+.site-footer .bi-arrow-down,
+.site-footer .bi-chevron-right,
+.site-footer .bi-chevron-left,
+.site-footer .bi-chevron-up,
+.site-footer .bi-chevron-down {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+.site-footer .bi-arrow-right::before,
+.site-footer .bi-arrow-left::before,
+.site-footer .bi-arrow-up::before,
+.site-footer .bi-arrow-down::before,
+.site-footer .bi-chevron-right::before,
+.site-footer .bi-chevron-left::before,
+.site-footer .bi-chevron-up::before,
+.site-footer .bi-chevron-down::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* =========================================================
+   SOSIAL MEDIA FOOTER
+   NORMAL = ICON PUTIH
+   HOVER  = BACKGROUND PUTIH + ICON HIJAU
+========================================================= */
+
+/* Kondisi normal */
+.site-footer .social-links a {
+    color: #FFFFFF !important;
+    background: transparent;
+    border-color: #FFFFFF;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.site-footer .social-links a i,
+.site-footer .social-links a .bi,
+.site-footer .social-links a i::before,
+.site-footer .social-links a .bi::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+
+/* Kondisi hover */
+.site-footer .social-links a:hover {
+    color: #00321F !important;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+
+    transform: translateY(-3px);
+}
+
+.site-footer .social-links a:hover i,
+.site-footer .social-links a:hover .bi,
+.site-footer .social-links a:hover i::before,
+.site-footer .social-links a:hover .bi::before {
+    color: #00321F !important;
+    -webkit-text-fill-color: #00321F !important;
+}
