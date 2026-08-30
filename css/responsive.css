@@ -167,9 +167,6 @@ section.py-5 p,
     border-color: rgba(255,255,255,.16) !important;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1) grayscale(1) brightness(1.8);
-}
 
 /* HERO */
 .hero {
